@@ -40,7 +40,12 @@ A Simple Example
     db.session.commit()
 
     users = User.query.all()
+    
+Create New Schema(创建新模式)
+----------------
 
+.. code-block:: python
+    db.create_schema("xxx")
 
 Links
 -----
