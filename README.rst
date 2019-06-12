@@ -28,7 +28,7 @@ A Simple Example
     app = Flask(__name__)
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///example.sqlite"
     db = SQLAlchemy(app)
-
+    db.create_schema("xxx")#Create New Schema(创建新模式)
 
     class User(db.Model):
         id = db.Column(db.Integer, primary_key=True)
@@ -41,12 +41,6 @@ A Simple Example
 
     users = User.query.all()
     
-Create New Schema(创建新模式)
-----------------
-
-.. code-block:: python
-    db.create_schema("xxx")
-
 Links
 -----
 
